@@ -1,0 +1,36 @@
+#include <iostream>
+#include <map>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    int n;
+    std::cin >> n;
+
+    std::map<std::string, int> word_count;
+    for (int i = 0; i < n; ++i) {
+        std::string word;
+        std::cin >> word;
+        ++word_count[word];
+    }
+
+    std::vector<std::string> most_common_words;
+    int max_count = 0;
+    for (const auto& pair : word_count) {
+        if (pair.second > max_count) {
+            most_common_words.clear();
+            most_common_words.push_back(pair.first);
+            max_count = pair.second;
+        } else if (pair.second == max_count) {
+            most_common_words.push_back(pair.first);
+        }
+    }
+
+    std::sort(most_common_words.begin(), most_common_words.end());
+
+    for (const auto& word : most_common_words) {
+        std::cout << word << ' ';
+    }
+
+    return 0;
+}
