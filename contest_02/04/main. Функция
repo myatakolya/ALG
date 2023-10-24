@@ -1,0 +1,13 @@
+#include <numeric>
+
+using namespace std;
+
+tuple<int, int, int> find_lcm(int x, int y) {
+    int z = lcm(x, y);
+    return make_tuple(z, z/x, z/y);
+}
+
+tuple<int, int> reduce(int x, int y) {
+    int z = gcd(x, y);
+    return make_tuple(x/z, y/z);
+}

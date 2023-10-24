@@ -1,0 +1,13 @@
+using namespace std;
+
+bool compare(string& a,string& b) {
+    int count_a = count(a.begin(), a.end(), '1');
+    int count_b = count(b.begin(), b.end(), '1');
+
+    if (count_a == count_b) {
+        return stoi(a) < stoi(b);
+    }
+    else {
+        return count_a > count_b;
+    }
+}
