@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int l, r;
+    int a,b,c;
+    cin >> a >> b >> c;
+    l = abs(a - b);
+    r = abs(a - c);
+
+    if (abs(r) > abs(l)){
+        cout << "B " << l << endl;
+    } else{
+        cout << "C " << r << endl;
+    }
+}

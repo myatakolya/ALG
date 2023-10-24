@@ -1,0 +1,17 @@
+#include <iostream>
+#include "cmath"
+using namespace std;
+
+double action(){
+    double a,b;
+    cin >> a >> b;
+    double c;
+    c = pow(a, 2) + pow(b, 2);
+    c = sqrt(c);
+    return c;
+}
+
+int main() {
+    double answer = action();
+    cout << answer;
+}

@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	per_year := 365 * 0.5
+	var tree_one int = int(per_year/32) + 1
+	var tree_two int = int(per_year/20) + 1
+	fmt.Println(per_year)
+	fmt.Println(tree_one)
+	fmt.Println(tree_two)
+
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+#include "cmath"
+using namespace std;
+
+double action(){
+    double m;
+    double h;
+    cin >> m >> h;
+    return (m / pow(h, 2));
+}
+
+int main() {
+    double answer;
+    answer = action();
+    cout << answer;
+}

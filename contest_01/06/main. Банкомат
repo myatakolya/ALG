@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	var num int
+	fmt.Scan(&num)
+	var step int = num / 5000
+	var step_one int = num - (5000 * step)
+	var step2 int = step_one / 1000
+	var step_two int = step_one - (1000 * step2)
+	var step3 int = step_two / 500
+	var step_three int = step_two - (500 * step3)
+	var step4 int = step_three / 200
+	var step_four int = step_three - (200 * step4)
+	var step5 int = step_four / 100
+	var step_five int = step_four - (100 * step5)
+	step_five = step_five * 0
+	fmt.Println(step, step2, step3, step4, step5)
+
+}

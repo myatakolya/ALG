@@ -1,0 +1,24 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+
+string action(int n) {
+    string output;
+    while(n){
+        output += (--n)%26 + 'A';
+        n /= 26;
+    }
+    reverse(output.begin(), output.end());
+    return output;
+}
+
+
+int main(){
+    int n;
+    cin >> n;
+    string answer;
+    answer = action(n);
+    cout << answer;
+}

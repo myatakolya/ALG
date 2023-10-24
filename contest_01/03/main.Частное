@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+long double action(){
+    double a;
+    double b;
+    cin >> a;
+    cin >> b;
+    long double output = (a / b);
+    return output;
+}
+
+int main() {
+    long double answer = action();
+    cout << answer;
+}
